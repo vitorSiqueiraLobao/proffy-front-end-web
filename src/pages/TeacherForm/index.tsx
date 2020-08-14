@@ -8,7 +8,8 @@ import './styles.css'
 import Input from '../../components/Input';
 import Textarea from '../../components/TextArea';
 import Select from '../../components/Select';
-//import api from '../../services/api';
+import api from '../../services/api';
+
 
 function TeacherForm(){
     const history = useHistory()
@@ -17,7 +18,6 @@ function TeacherForm(){
     const [avatar, setAvatar] = useState('');
     const [whatsapp, setWhatsapp] = useState('');
     const [bio, setBio] = useState('');
-
     const [subject, setSubject] = useState('');
     const [cost, setCost] = useState('');
 
@@ -46,8 +46,8 @@ function TeacherForm(){
     
     function handleCreateClass(e: FormEvent){
         e.preventDefault();
-
-        /*api.post('classes', {
+        
+        api.post('classes', {
             name,
             avatar,
             whatsapp,
@@ -62,7 +62,7 @@ function TeacherForm(){
         }).catch(() => {
             alert('Erro no cadastro!');
         })
-        */
+        
     }
 
     return(

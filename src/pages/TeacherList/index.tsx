@@ -6,7 +6,7 @@ import TeacherItem, {Teacher} from '../../components/TeacherItem';
 import './styles.css'
 import Input from '../../components/Input';
 import Select from '../../components/Select';
-//import api from '../../services/api';
+import api from '../../services/api';
 
 function TeacherList(){
     const [teachers, setTeachers] = useState([]);
@@ -17,7 +17,7 @@ function TeacherList(){
 
     async function searchTeachers(e: FormEvent){
         e.preventDefault();
-/*
+
         const response = await api.get('classes', {
             params: {
                 subject,
@@ -26,7 +26,7 @@ function TeacherList(){
             }
         });
 
-        setTeachers(response.data);*/
+        setTeachers(response.data);
     }
 
     return(
